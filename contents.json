@@ -1,8 +1,10 @@
 {
     "Languages": [
         "Java",
+        "Swift",
         "JavaScript",
         "Python",
+        "Kotlin",
         "C",
         "PHP"
     ],
@@ -14,6 +16,7 @@
     ],
 
     "Technologies": [
+        "git",
         "AWS",
         "Linux",
         "macOS",
