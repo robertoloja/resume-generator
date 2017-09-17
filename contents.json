@@ -1,0 +1,24 @@
+{
+    "Languages": [
+        "Java",
+        "JavaScript",
+        "Python",
+        "C",
+        "PHP"
+    ],
+
+    "Databases": [
+        "SQL",
+        "Mongo",
+        "Firebase"
+    ],
+
+    "Technologies": [
+        "AWS",
+        "Linux",
+        "macOS",
+        "Windows",
+        "iOS",
+        "Android"
+    ]
+}
