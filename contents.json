@@ -1,5 +1,5 @@
 {
-    "languages": [
+    "Languages": [
         "Java",
         "Swift",
         "Kotlin",
@@ -9,7 +9,7 @@
         "bar"
     ],
 
-    "databases": [
+    "Databases": [
         "SQL",
         "Mongo",
         "Firebase",
@@ -17,7 +17,7 @@
         "PostgreSQL"
     ],
 
-    "technologies": [
+    "Technologies": [
         "git",
         "AWS",
         "Linux",

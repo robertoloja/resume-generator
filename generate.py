@@ -22,7 +22,8 @@ def renderToFile(file, template, c, JSON):
 
 def generateHTML(JSON, section, c):
     """Return c columns of html, corresponding to section of JSON."""
-    html = ""
+    html = '<h2>' + section + """</h2></div><div class="yui-u"
+            style="font-size: 125%;">"""
     for i in range(c):
         html += "<ul class='talent'>"
         size = int(math.ceil(len(JSON[section]) / c))
