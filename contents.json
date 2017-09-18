@@ -2,26 +2,29 @@
     "Languages": [
         "Java",
         "Swift",
-        "Kotlin",
+        "Python",
         "C",
         "PHP",
-        "Pascal",
-        "bar"
+        "JavaScript",
+        "HTML5",
+        "CSS"
     ],
 
     "Databases": [
         "SQL",
-        "Mongo",
+        "MongoDB",
         "Firebase",
-        "Oracle",
         "PostgreSQL"
     ],
 
     "Technologies": [
+        "Linux",
+        "macOS",
+        "Windows",
+        "Android",
+        "iOS",
         "git",
         "AWS",
-        "Linux",
-        "Android",
-        "iOS"
+        "docker"
     ]
 }
