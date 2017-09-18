@@ -1,17 +1,45 @@
+#!/usr/local/bin/python3
+import math
 import json
 
-resume_content_file = "contents.json"
-print_template = "templates/print_template.html"
-web_template = "templates/web_template.html"
-resume = "resume.html"
+number_of_columns = 3
 
-with open(resume_content_file) as file:
-    content = json.load(file)
+def openHTML(file):
+    with open(file) as f:
+        return f.readlines()
 
-with open(print_template) as file:
-    pTemplate = file.read()
 
-print(pTemplate)
+def renderToFile(file, template, inputJSON):
+    with open(file, "w+") as output:
+        for line in template:
+            if "<%" in line: #TODO: Turn this into <%-- section -->
+                generateHTML(inputJSON, line.split(" ")[1], output, number_of_columns)
+            else:
+                print(line, file=output)
 
-# Overwrite/create file
-with open(resume, "w+") as file:
+
+def generateHTML(inputJSON, section, output, numcols):
+    for i in range(numcols):
+        print("<ul class='talent'>", file=output)
+        colsize = int(math.ceil(len(inputJSON[section]) / numcols))
+
+        col = [inputJSON[section][x] for x in range(i, len(inputJSON[section]),
+            numcols)]
+
+        for j in range(colsize - 1):
+            print("<li>" + col[j] + "</li>", file = output)
+
+        print("<li class='last'>" +
+                (col[-1] if len(col) == colsize else "") + "</li>",
+                file = output)
+        print("</ul>", file = output)
+
+
+with open("contents.json") as f:
+    content = json.load(f)
+
+print_template = openHTML("templates/print_template.html")
+web_template = openHTML("templates/web_template.html")
+
+renderToFile("resume-print.html", print_template, content)
+renderToFile("resume-web.html", web_template, content)

@@ -1,27 +1,26 @@
 {
-    "Languages": [
+    "languages": [
         "Java",
         "Swift",
-        "JavaScript",
-        "Python",
         "Kotlin",
         "C",
-        "PHP"
+        "PHP",
+        "Pascal"
     ],
 
-    "Databases": [
+    "databases": [
         "SQL",
         "Mongo",
-        "Firebase"
+        "Firebase",
+        "Oracle",
+        "PostgreSQL"
     ],
 
-    "Technologies": [
+    "technologies": [
         "git",
         "AWS",
         "Linux",
-        "macOS",
-        "Windows",
-        "iOS",
-        "Android"
+        "Android",
+        "iOS"
     ]
 }
