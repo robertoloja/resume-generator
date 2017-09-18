@@ -5,7 +5,8 @@
         "Kotlin",
         "C",
         "PHP",
-        "Pascal"
+        "Pascal",
+        "bar"
     ],
 
     "databases": [
