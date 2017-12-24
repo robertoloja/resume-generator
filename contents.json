@@ -4,17 +4,14 @@
         "Swift",
         "Python",
         "C",
-        "PHP",
         "JavaScript",
-        "HTML5",
-        "CSS"
+        "HTML5"
     ],
 
     "Databases": [
         "SQL",
         "MongoDB",
-        "Firebase",
-        "PostgreSQL"
+        "Firebase"
     ],
 
     "Technologies": [
@@ -24,7 +21,8 @@
         "Android",
         "iOS",
         "git",
-        "AWS",
-        "docker"
+        "Espresso (novice)",
+        "XCUITest (novice)",
+        "AWS"
     ]
 }

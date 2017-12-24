@@ -1,8 +1,8 @@
 #!/usr/local/bin/python3
 import math
 import json
+NUMBER_OF_COLUMNS = 3
 
-number_of_columns = 3
 
 def readHTML(file):
     with open(file) as f:
@@ -14,8 +14,7 @@ def renderToFile(file, template, c, JSON):
     with open(file, "w+") as output:
         for line in template:
             if "<%--" in line:
-                print(generateHTML(JSON, line.split(" ")[1], c),
-                      file=output)
+                print(generateHTML(JSON, line.split(" ")[1], c), file=output)
             else:
                 print(line, file=output)
 
@@ -38,9 +37,13 @@ def generateHTML(JSON, section, c):
     return html
 
 
-with open("contents.json") as f:
-    content = json.load(f)
+def main():
+    with open("contents.json") as f:
+        content = json.load(f)
 
-for medium in ["print", "web"]:
-    renderToFile("resume-" + medium + ".html", readHTML("templates/" + medium +
-                 "_template.html"), number_of_columns, content)
+    for medium in ["print", "web"]:
+        renderToFile("resume-" + medium + ".html", readHTML("templates/" +
+                     medium + "_template.html"), NUMBER_OF_COLUMNS, content)
+
+
+main()
